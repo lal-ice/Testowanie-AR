@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <!-- Dodaj wsparcie dla AR.js -->
-    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-</head>
-<body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs='sourceType: webcam;'>
-    <!-- Dodaj model 3D -->
-    <a-entity gltf-model="url(Wieszak CALORA.glb)" scale="2 2 2" position="0 0 0" rotation="0 0 0"></a-entity>
-    <a-marker-camera preset="hiro"></a-marker-camera>
-    </a-scene>
+   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false;'>
+    <a-marker preset="hiro">
+        <a-entity gltf-model="url(Wieszak CALORA.glb)" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-entity>
+    </a-marker>
+    <a-entity camera></a-entity>
+</a-scene>
+
 </body>
 </html>
